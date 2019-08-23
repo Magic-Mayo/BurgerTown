@@ -18,12 +18,17 @@ li {
 }
 
 #new-burger {
-    margin-left: 10px
+    margin: 10px
 }
 
 .burgers {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.burger-col {
+    position: absolute;
 }
 
 .new-burger-col {
