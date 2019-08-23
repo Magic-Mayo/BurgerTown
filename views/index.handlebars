@@ -10,10 +10,10 @@
                     {{#each burgers}}
                         {{#unless devoured}}
                             <li>
-                                {{burger_name}}
-                                <form action="/burgers/update?_method=PUT" method="post">
-                                    <input type="hidden" name="id" type="text" value="{{id}}"><br>
-                                    <button type="submit" class="btn btn-danger btn-sm">DEVOUR!</button>
+                                <form action="/burgers/devour?_method=put" method="POST">
+                                    <input type="hidden" type="text" value="{{id}}"><br>
+                                    <button type="submit" name='devour' class="btn btn-danger btn-sm" id="devour">DEVOUR!</button>
+                                    <label for="devour">{{burger_name}}</label>
                                 </form>
                             </li>
                         {{/unless}}
@@ -43,8 +43,8 @@
         <div class="col new-burger-col">
             <h2>Add your own Burger!</h2>
 
-            <form action="/burgers/new" method="post">
-                <input type="text" name="new-burger" id="new-burger">
+            <form action="/burgers/new" method="POST">
+                <input type="text" name="newburger" id="newburger"><br>
                 <button type="submit" class="btn btn-sm btn-success new-burger">ADD!</button>
             </form>
         </div>
