@@ -1,3 +1,3 @@
-insert into burgers (burger_name, devoured) values ("el diablo", true);
-insert into burgers (burger_name, devoured) values ("all american", true);
-insert into burgers (burger_name, devoured) values ("seafood", false);
+insert into burgers (burger_name, devoured) values ("Phoenix", true);
+insert into burgers (burger_name, devoured) values ("Philly", true);
+insert into burgers (burger_name, devoured) values ("Miami", false);
