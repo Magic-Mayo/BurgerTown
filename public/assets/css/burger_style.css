@@ -1,0 +1,49 @@
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    margin-left: 10px;
+}
+
+.devoured {
+    text-decoration-line: line-through;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#new-burger {
+    margin: 10px
+}
+
+.burgers {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.burger-col {
+    position: absolute;
+}
+
+.new-burger-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.new-burgers-row {
+    margin-top: 5rem;
+}
+
+.burgers-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
