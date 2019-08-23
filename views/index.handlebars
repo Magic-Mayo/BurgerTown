@@ -1,8 +1,52 @@
-<h1>Welcome to Burger Town!</h1>
+<div class="jumbotron"><h1 class="title">Welcome to Burger Town!</h1></div>
 
-<h2>Burgers that need eatin'!</h2>
+<div class="container">
+    <div class="row burgers">
+        <div class="col burgers-col">
+            <h2>Burgers that need eatin'!</h2>
 
-<ul>
-    {{#each burgers}}
-    {{/each}}
-</ul>
+            <div class="row">
+                <ul>
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                            <li>
+                                {{burger_name}}
+                                <form action="/burgers/update?_method=PUT" method="post">
+                                    <input type="hidden" name="id" type="text" value="{{id}}"><br>
+                                    <button type="submit" class="btn btn-danger btn-sm">DEVOUR!</button>
+                                </form>
+                            </li>
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="col burgers-col">
+            <h2>Burgers devoured!</h2>
+
+            <div class="row">
+                <ul>
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            <li class="devoured">
+                                {{burger_name}}
+                            </li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row new-burgers-row">
+        <div class="col new-burger-col">
+            <h2>Add your own Burger!</h2>
+
+            <form action="/burgers/new" method="post">
+                <input type="text" name="new-burger" id="new-burger">
+                <button type="submit" class="btn btn-sm btn-success new-burger">ADD!</button>
+            </form>
+        </div>
+    </div>
+</div>
