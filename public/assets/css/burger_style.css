@@ -17,18 +17,13 @@ li {
     margin-bottom: 3rem;
 }
 
-#new-burger {
-    margin: 10px
+#newburger {
+    margin: 10px;
+    
 }
 
 .burgers {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
 
-.burger-col {
-    position: absolute;
 }
 
 .new-burger-col {
@@ -43,7 +38,4 @@ li {
 }
 
 .burgers-col {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
