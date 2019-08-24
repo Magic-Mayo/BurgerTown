@@ -18,12 +18,12 @@ router.post('/burgers/new', (req,res)=>{
     })
 });
 
-router.put('/burgers/devour', (req,res)=>{
+router.post('/burgers/devour/', (req,res)=>{
     console.log(req.body)
-    // burger.update({devoured: req.body, req.body.id, (results)=>{
-    //     console.log(results)
-    //     res.redirect('/')
-    // });
-})
+    burger.update(req.body.id, (results)=>{
+        console.log(results)
+        res.redirect('/');
+    });
+});
 
 module.exports = router;

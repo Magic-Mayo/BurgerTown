@@ -1,7 +1,7 @@
 <div class="jumbotron"><h1 class="title">Welcome to Burger Town!</h1></div>
 
 <div class="container">
-    <div class="row burgers">
+    <div class="d-flex flex-row burgers">
         <div class="col burgers-col">
             <h2>Burgers that need eatin'!</h2>
 
@@ -10,9 +10,9 @@
                     {{#each burgers}}
                         {{#unless devoured}}
                             <li>
-                                <form action="/burgers/devour?_method=put" method="POST">
-                                    <input type="hidden" type="text" value="{{id}}"><br>
-                                    <button type="submit" name='devour' class="btn btn-danger btn-sm" id="devour">DEVOUR!</button>
+                                <form action="/burgers/devour/" method="POST">
+                                    <input type="hidden" name='id' value={{id}}><br>
+                                    <button type="submit" class="btn btn-danger btn-sm" id="devour">DEVOUR!</button>
                                     <label for="devour">{{burger_name}}</label>
                                 </form>
                             </li>
