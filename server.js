@@ -1,5 +1,5 @@
 const express = require('express');
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static("public"));
@@ -16,6 +16,6 @@ const routes = require("./controllers/burgers_controllers.js");
 
 app.use(routes);
 
-app.listen(PORT, function() {
-  console.log(`Server listening on port: ${PORT}`);
+app.listen(port, function() {
+  console.log(`Server listening on port: ${port}`);
 });
